@@ -21,8 +21,9 @@ public class makeCollection {
 
 	
 	
-	public static void main(String[] args) throws Exception{
-		String filepath="C:\\Users\\hanyj\\OneDrive\\바탕 화면\\2주차 실습 html";
+	  static void make(String args) throws Exception{
+		//String filepath=args;
+		 String filepath=args;
 		File files= new File(filepath);
 		int number=0;
 		DocumentBuilderFactory docFactory=DocumentBuilderFactory.newInstance();
@@ -110,6 +111,8 @@ public class makeCollection {
 		}
 		return null;
 					}
+
+	
 	}
 
 
