@@ -36,7 +36,7 @@ public class makeKeyword {
 //String path=args;	
 DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
 DocumentBuilder builder=factory.newDocumentBuilder();
-Document document=builder.parse(args);
+Document document=builder.parse("collection.xml");
 
 Element rootElement=document.getDocumentElement();
 NodeList bodyElements=rootElement.getElementsByTagName("body");//body데이터 추출하기위해 선언
@@ -60,7 +60,7 @@ for(int c=0;c<bodyElements.getLength();c++) {//여기서 바디 요소 다받고kkm분석후 
 		herestring=herestring+updatestring;//for문 실행값 받아서 herestring에 전부 저장 
 	}
 	System.out.println(herestring);
-	document.getElementsByTagName("body").item(c).setTextContent(herestring+"\n");
+	document.getElementsByTagName("body").item(c).setTextContent(herestring);
 	//Text.valueOf(herestring);
 	}
 Transformer xformer = TransformerFactory.newInstance().newTransformer();
