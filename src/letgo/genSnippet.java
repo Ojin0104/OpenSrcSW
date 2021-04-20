@@ -1,8 +1,19 @@
 package letgo;
 
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
 public class genSnippet {
 //가장많은거
 	public static void gen(String[] args) throws Exception{
+		DocumentBuilderFactory factory=DocumentBuilderFactory.newInstance();
+		DocumentBuilder builder=factory.newDocumentBuilder();
+		Document document=builder.parse(args[0]);//txt문서받아옴
+
+		Element rootElement=document.getDocumentElement();//근데 txt를 어떻게 받아올지 모르겟어서 배열로 받았다 치고 코딩하였습니다.
 	String[] line=new String[5];
 	line[0]="라면 밀가루 달걀 밥 생선";
 	line[1]="라면 물 소금 반죽";
